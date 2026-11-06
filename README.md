@@ -4,6 +4,22 @@
 
 This final-year team project explores deadline-aware pickup-and-delivery task assignment and route planning for a simulated drone fleet. The Java code includes command-line workflows and Swing visualizations. It is a software simulation project; it does not control physical drones.
 
+## Project screenshots
+
+The screenshots below show the routing interface and sample simulation outputs.
+
+### Routing algorithms and scheduled-goal results
+
+The interface displays obstacle-aware routes and results from PRS, A*, and MCH scheduler runs.
+
+![PRS geometric engine and A-star routing interface with scheduled-goal results](docs/screenshots/prs-a-star-routing-comparison.png)
+
+### Berlin map route run
+
+A sample run on a 256 × 256 Berlin map. The results panel reports 70 exact boundary polygons and a delivery distance of 302.6, marked on time for the displayed deadline.
+
+![PRS route through obstacles on the Berlin 256 by 256 map](docs/screenshots/prs-berlin-256-route.png)
+
 ## Approach
 
 - **Hybrid Zone-Based Multi-Token Passing (HZ-MTP):** partitions the work area into zones and uses localized token coordination to assign delivery tasks.
