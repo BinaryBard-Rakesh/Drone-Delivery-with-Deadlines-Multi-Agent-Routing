@@ -1,0 +1,854 @@
+PS D:\FINAL PROJECT MAIN SURJENDU> cd "d:\FINAL PROJECT MAIN SURJENDU\" ; if ($?) { javac Demo.java } ; if ($?) { java Demo }
+
+╔════════════════════════════════════════════════════════════════════════════════╗
+║     DRONE JOB ASSIGNMENT & ROUTING SYSTEM - COMPREHENSIVE DEMO               ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+
+════════════════════════════════════════════════════════════════════════════════
+STEP 1: Generating 50 random tasks for the multi-zone comparison scenario
+════════════════════════════════════════════════════════════════════════════════
+Enter number of tasks for this scenario [default 50]: 75
+Enter number of zones for this scenario [default 3]: 6
+Enter number of drones per zone [default 3]: 3
+
+════════════════════════════════════════════════════════════════════════════════
+STEP 2: Dividing tasks into 6 zones and registering 18 drones
+════════════════════════════════════════════════════════════════════════════════
+? Registered 18 drones across 6 zones.
+? Assigned Task[ID=31, Pickup(385.1,883.5), Delivery(713.8,164.0), Deadline=2026-07-09T01:00:24.485612200, Priority=0] to Drone[ID=2, Pos(531.9,568.7), Zone=1, CurrentTask=31, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=39, Pickup(871.5,803.2), Delivery(296.8,378.4), Deadline=2026-07-09T01:21:24.485612200, Priority=0] to Drone[ID=1, Pos(546.9,560.1), Zone=1, CurrentTask=39, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=1, Pickup(745.0,699.6), Delivery(316.1,283.7), Deadline=2026-07-09T02:16:24.484098300, Priority=0] to Drone[ID=1, Pos(546.9,560.1), Zone=1, CurrentTask=39, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=47, Pickup(785.5,538.4), Delivery(181.3,729.7), Deadline=2026-07-09T02:50:24.485612200, Priority=0] to Drone[ID=1, Pos(546.9,560.1), Zone=1, CurrentTask=39, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=33, Pickup(1008.6,132.2), Delivery(628.8,555.9), Deadline=2026-07-09T01:00:24.485612200, Priority=0] to Drone[ID=4, Pos(776.0,436.7), Zone=2, CurrentTask=33, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=42, Pickup(468.0,110.1), Delivery(965.2,827.4), Deadline=2026-07-09T01:11:24.485612200, Priority=0] to Drone[ID=6, Pos(761.0,428.1), Zone=2, CurrentTask=42, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=20, Pickup(1002.0,185.2), Delivery(942.6,284.1), Deadline=2026-07-09T01:19:24.485612200, Priority=0] to Drone[ID=4, Pos(776.0,436.7), Zone=2, CurrentTask=33, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=22, Pickup(934.6,297.0), Delivery(961.3,304.5), Deadline=2026-07-09T01:20:24.485612200, Priority=0] to Drone[ID=4, Pos(776.0,436.7), Zone=2, CurrentTask=33, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=43, Pickup(860.3,99.2), Delivery(935.2,628.1), Deadline=2026-07-09T01:29:24.485612200, Priority=0] to Drone[ID=6, Pos(761.0,428.1), Zone=2, CurrentTask=42, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=25, Pickup(597.5,704.8), Delivery(569.7,118.5), Deadline=2026-07-09T01:30:24.485612200, Priority=0] to Drone[ID=5, Pos(761.0,445.4), Zone=2, CurrentTask=25, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=72, Pickup(933.2,213.5), Delivery(885.1,320.9), Deadline=2026-07-09T01:36:24.485612200, Priority=0] to Drone[ID=4, Pos(776.0,436.7), Zone=2, CurrentTask=33, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=23, Pickup(561.5,289.0), Delivery(990.7,926.2), Deadline=2026-07-09T01:39:24.485612200, Priority=0] to Drone[ID=6, Pos(761.0,428.1), Zone=2, CurrentTask=42, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=28, Pickup(445.4,967.0), Delivery(912.7,132.2), Deadline=2026-07-09T01:42:24.485612200, Priority=0] to Drone[ID=5, Pos(761.0,445.4), Zone=2, CurrentTask=25, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=13, Pickup(585.3,379.9), Delivery(892.7,825.1), Deadline=2026-07-09T01:43:24.485612200, Priority=0] to Drone[ID=6, Pos(761.0,428.1), Zone=2, CurrentTask=42, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=46, Pickup(658.3,476.2), Delivery(903.1,477.8), Deadline=2026-07-09T01:45:24.485612200, Priority=0] to Drone[ID=5, Pos(761.0,445.4), Zone=2, CurrentTask=25, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=48, Pickup(839.4,657.6), Delivery(991.6,304.9), Deadline=2026-07-09T01:46:24.485612200, Priority=0] to Drone[ID=5, Pos(761.0,445.4), Zone=2, CurrentTask=25, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=49, Pickup(721.9,311.0), Delivery(654.8,579.4), Deadline=2026-07-09T01:51:24.485612200, Priority=0] to Drone[ID=6, Pos(761.0,428.1), Zone=2, CurrentTask=42, QueueSize=4, TasksCompleted=0]
+? Assigned Task[ID=32, Pickup(532.2,443.2), Delivery(783.2,658.0), Deadline=2026-07-09T02:05:24.485612200, Priority=0] to Drone[ID=5, Pos(761.0,445.4), Zone=2, CurrentTask=25, QueueSize=4, TasksCompleted=0]
+? Assigned Task[ID=27, Pickup(853.7,266.4), Delivery(985.3,407.1), Deadline=2026-07-09T02:08:24.485612200, Priority=0] to Drone[ID=6, Pos(761.0,428.1), Zone=2, CurrentTask=42, QueueSize=5, TasksCompleted=0]
+? Assigned Task[ID=15, Pickup(828.5,643.0), Delivery(474.5,312.9), Deadline=2026-07-09T02:09:24.485612200, Priority=0] to Drone[ID=5, Pos(761.0,445.4), Zone=2, CurrentTask=25, QueueSize=5, TasksCompleted=0]
+? Assigned Task[ID=12, Pickup(561.3,8.3), Delivery(775.8,646.2), Deadline=2026-07-09T02:23:24.485612200, Priority=0] to Drone[ID=6, Pos(761.0,428.1), Zone=2, CurrentTask=42, QueueSize=6, TasksCompleted=0]
+? Assigned Task[ID=54, Pickup(503.0,744.6), Delivery(687.4,101.1), Deadline=2026-07-09T02:24:24.485612200, Priority=0] to Drone[ID=5, Pos(761.0,445.4), Zone=2, CurrentTask=25, QueueSize=6, TasksCompleted=0]
+? Assigned Task[ID=57, Pickup(742.7,691.7), Delivery(860.0,492.1), Deadline=2026-07-09T02:31:24.485612200, Priority=0] to Drone[ID=5, Pos(761.0,445.4), Zone=2, CurrentTask=25, QueueSize=7, TasksCompleted=0]
+? Assigned Task[ID=74, Pickup(748.2,947.9), Delivery(815.7,230.2), Deadline=2026-07-09T02:44:24.485612200, Priority=0] to Drone[ID=5, Pos(761.0,445.4), Zone=2, CurrentTask=25, QueueSize=8, TasksCompleted=0]
+? Assigned Task[ID=36, Pickup(468.9,189.6), Delivery(702.2,452.3), Deadline=2026-07-09T02:46:24.485612200, Priority=0] to Drone[ID=6, Pos(761.0,428.1), Zone=2, CurrentTask=42, QueueSize=7, TasksCompleted=0]
+? Assigned Task[ID=9, Pickup(368.9,445.1), Delivery(468.3,484.0), Deadline=2026-07-09T00:57:24.485612200, Priority=0] to Drone[ID=9, Pos(348.1,572.9), Zone=3, CurrentTask=9, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=53, Pickup(253.6,647.6), Delivery(347.9,671.4), Deadline=2026-07-09T00:57:24.485612200, Priority=0] to Drone[ID=8, Pos(348.1,590.3), Zone=3, CurrentTask=53, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=30, Pickup(517.2,96.0), Delivery(521.0,876.2), Deadline=2026-07-09T01:03:24.485612200, Priority=0] to Drone[ID=9, Pos(348.1,572.9), Zone=3, CurrentTask=9, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=50, Pickup(54.9,644.4), Delivery(649.9,334.5), Deadline=2026-07-09T01:39:24.485612200, Priority=0] to Drone[ID=8, Pos(348.1,590.3), Zone=3, CurrentTask=53, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=65, Pickup(625.5,942.5), Delivery(34.5,183.7), Deadline=2026-07-09T02:11:24.485612200, Priority=0] to Drone[ID=7, Pos(363.1,581.6), Zone=3, CurrentTask=65, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=5, Pickup(176.4,601.5), Delivery(769.3,584.7), Deadline=2026-07-09T02:32:24.485612200, Priority=0] to Drone[ID=8, Pos(348.1,590.3), Zone=3, CurrentTask=53, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=63, Pickup(102.9,938.3), Delivery(207.0,576.5), Deadline=2026-07-09T02:45:24.485612200, Priority=0] to Drone[ID=8, Pos(348.1,590.3), Zone=3, CurrentTask=53, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=38, Pickup(3.8,288.0), Delivery(549.2,991.2), Deadline=2026-07-09T02:51:24.485612200, Priority=0] to Drone[ID=9, Pos(348.1,572.9), Zone=3, CurrentTask=9, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=67, Pickup(745.1,29.4), Delivery(832.1,393.8), Deadline=2026-07-09T01:00:24.485612200, Priority=0] to Drone[ID=10, Pos(611.1,159.5), Zone=4, CurrentTask=67, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=56, Pickup(741.4,270.0), Delivery(877.6,10.4), Deadline=2026-07-09T01:20:24.485612200, Priority=0] to Drone[ID=10, Pos(611.1,159.5), Zone=4, CurrentTask=67, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=24, Pickup(747.1,9.2), Delivery(17.5,310.4), Deadline=2026-07-09T01:22:24.485612200, Priority=0] to Drone[ID=10, Pos(611.1,159.5), Zone=4, CurrentTask=67, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=4, Pickup(817.4,154.2), Delivery(346.4,256.7), Deadline=2026-07-09T01:44:24.485612200, Priority=0] to Drone[ID=10, Pos(611.1,159.5), Zone=4, CurrentTask=67, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=45, Pickup(529.9,76.5), Delivery(507.7,180.1), Deadline=2026-07-09T01:55:24.485612200, Priority=0] to Drone[ID=12, Pos(596.1,150.9), Zone=4, CurrentTask=45, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=37, Pickup(433.4,53.7), Delivery(617.4,170.2), Deadline=2026-07-09T02:38:24.485612200, Priority=0] to Drone[ID=12, Pos(596.1,150.9), Zone=4, CurrentTask=45, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=14, Pickup(393.2,117.7), Delivery(150.3,298.6), Deadline=2026-07-09T01:09:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=21, Pickup(322.7,453.4), Delivery(98.8,763.0), Deadline=2026-07-09T01:09:24.485612200, Priority=0] to Drone[ID=13, Pos(235.3,465.0), Zone=5, CurrentTask=21, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=52, Pickup(448.1,873.5), Delivery(11.9,222.5), Deadline=2026-07-09T01:11:24.485612200, Priority=0] to Drone[ID=14, Pos(220.3,473.7), Zone=5, CurrentTask=52, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=70, Pickup(301.7,644.7), Delivery(104.0,319.4), Deadline=2026-07-09T01:14:24.485612200, Priority=0] to Drone[ID=14, Pos(220.3,473.7), Zone=5, CurrentTask=52, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=68, Pickup(235.7,390.7), Delivery(190.0,910.5), Deadline=2026-07-09T01:26:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=64, Pickup(242.9,257.3), Delivery(99.4,962.3), Deadline=2026-07-09T01:46:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=60, Pickup(428.4,179.7), Delivery(192.8,465.5), Deadline=2026-07-09T01:48:24.485612200, Priority=0] to Drone[ID=13, Pos(235.3,465.0), Zone=5, CurrentTask=21, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=40, Pickup(15.4,299.9), Delivery(338.0,669.9), Deadline=2026-07-09T01:49:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=6, Pickup(92.8,817.8), Delivery(324.1,203.9), Deadline=2026-07-09T02:13:24.485612200, Priority=0] to Drone[ID=14, Pos(220.3,473.7), Zone=5, CurrentTask=52, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=10, Pickup(562.1,38.3), Delivery(53.8,807.5), Deadline=2026-07-09T02:16:24.485612200, Priority=0] to Drone[ID=13, Pos(235.3,465.0), Zone=5, CurrentTask=21, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=69, Pickup(12.5,158.7), Delivery(138.5,691.0), Deadline=2026-07-09T02:16:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=4, TasksCompleted=0]
+? Assigned Task[ID=35, Pickup(397.1,15.6), Delivery(105.4,106.3), Deadline=2026-07-09T02:20:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=5, TasksCompleted=0]
+? Assigned Task[ID=66, Pickup(150.4,249.4), Delivery(203.2,723.2), Deadline=2026-07-09T02:20:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=6, TasksCompleted=0]
+? Assigned Task[ID=73, Pickup(24.2,468.1), Delivery(316.8,159.2), Deadline=2026-07-09T02:21:24.485612200, Priority=0] to Drone[ID=14, Pos(220.3,473.7), Zone=5, CurrentTask=52, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=2, Pickup(93.5,462.1), Delivery(390.8,707.0), Deadline=2026-07-09T02:27:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=7, TasksCompleted=0]
+? Assigned Task[ID=8, Pickup(224.8,610.2), Delivery(193.3,387.5), Deadline=2026-07-09T02:38:24.485612200, Priority=0] to Drone[ID=14, Pos(220.3,473.7), Zone=5, CurrentTask=52, QueueSize=4, TasksCompleted=0]
+? Assigned Task[ID=17, Pickup(37.4,495.5), Delivery(670.8,405.3), Deadline=2026-07-09T02:38:24.485612200, Priority=0] to Drone[ID=14, Pos(220.3,473.7), Zone=5, CurrentTask=52, QueueSize=5, TasksCompleted=0]
+? Assigned Task[ID=11, Pickup(287.3,200.7), Delivery(183.6,886.5), Deadline=2026-07-09T02:53:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=8, TasksCompleted=0]
+? Assigned Task[ID=51, Pickup(402.6,465.6), Delivery(274.4,494.0), Deadline=2026-07-09T02:55:24.485612200, Priority=0] to Drone[ID=13, Pos(235.3,465.0), Zone=5, CurrentTask=21, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=71, Pickup(147.8,464.2), Delivery(151.4,755.4), Deadline=2026-07-09T02:56:24.485612200, Priority=0] to Drone[ID=15, Pos(220.3,456.4), Zone=5, CurrentTask=14, QueueSize=9, TasksCompleted=0]
+? Assigned Task[ID=62, Pickup(712.5,907.9), Delivery(592.3,670.1), Deadline=2026-07-09T01:04:24.485612200, Priority=0] to Drone[ID=16, Pos(598.4,798.0), Zone=6, CurrentTask=62, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=34, Pickup(612.0,763.7), Delivery(771.4,993.1), Deadline=2026-07-09T01:06:24.485612200, Priority=0] to Drone[ID=16, Pos(598.4,798.0), Zone=6, CurrentTask=62, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=59, Pickup(432.2,986.5), Delivery(966.9,848.7), Deadline=2026-07-09T01:21:24.485612200, Priority=0] to Drone[ID=17, Pos(583.4,806.7), Zone=6, CurrentTask=59, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=26, Pickup(78.0,910.0), Delivery(676.9,723.1), Deadline=2026-07-09T01:24:24.485612200, Priority=0] to Drone[ID=17, Pos(583.4,806.7), Zone=6, CurrentTask=59, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=75, Pickup(725.2,722.4), Delivery(531.7,711.2), Deadline=2026-07-09T01:28:24.485612200, Priority=0] to Drone[ID=16, Pos(598.4,798.0), Zone=6, CurrentTask=62, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=7, Pickup(427.7,997.4), Delivery(730.5,492.1), Deadline=2026-07-09T01:29:24.485612200, Priority=0] to Drone[ID=17, Pos(583.4,806.7), Zone=6, CurrentTask=59, QueueSize=2, TasksCompleted=0]
+? Assigned Task[ID=58, Pickup(743.2,749.4), Delivery(1000.6,936.1), Deadline=2026-07-09T01:31:24.485612200, Priority=0] to Drone[ID=16, Pos(598.4,798.0), Zone=6, CurrentTask=62, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=18, Pickup(139.5,837.0), Delivery(1001.0,718.9), Deadline=2026-07-09T01:33:24.485612200, Priority=0] to Drone[ID=17, Pos(583.4,806.7), Zone=6, CurrentTask=59, QueueSize=3, TasksCompleted=0]
+? Assigned Task[ID=29, Pickup(499.9,370.1), Delivery(755.7,875.9), Deadline=2026-07-09T01:35:24.485612200, Priority=0] to Drone[ID=18, Pos(583.4,789.4), Zone=6, CurrentTask=29, QueueSize=0, TasksCompleted=0]
+? Assigned Task[ID=19, Pickup(613.2,999.5), Delivery(78.9,793.7), Deadline=2026-07-09T01:41:24.485612200, Priority=0] to Drone[ID=17, Pos(583.4,806.7), Zone=6, CurrentTask=59, QueueSize=4, TasksCompleted=0]
+? Assigned Task[ID=61, Pickup(615.3,955.3), Delivery(989.4,637.8), Deadline=2026-07-09T02:05:24.485612200, Priority=0] to Drone[ID=17, Pos(583.4,806.7), Zone=6, CurrentTask=59, QueueSize=5, TasksCompleted=0]
+? Assigned Task[ID=3, Pickup(801.7,941.4), Delivery(447.0,767.9), Deadline=2026-07-09T02:07:24.485612200, Priority=0] to Drone[ID=16, Pos(598.4,798.0), Zone=6, CurrentTask=62, QueueSize=4, TasksCompleted=0]
+? Assigned Task[ID=55, Pickup(659.1,967.4), Delivery(604.0,763.4), Deadline=2026-07-09T02:10:24.485612200, Priority=0] to Drone[ID=17, Pos(583.4,806.7), Zone=6, CurrentTask=59, QueueSize=6, TasksCompleted=0]
+? Assigned Task[ID=16, Pickup(815.1,710.7), Delivery(94.9,809.7), Deadline=2026-07-09T02:20:24.485612200, Priority=0] to Drone[ID=16, Pos(598.4,798.0), Zone=6, CurrentTask=62, QueueSize=5, TasksCompleted=0]
+? Assigned Task[ID=41, Pickup(445.0,562.3), Delivery(590.6,745.0), Deadline=2026-07-09T02:53:24.485612200, Priority=0] to Drone[ID=18, Pos(583.4,789.4), Zone=6, CurrentTask=29, QueueSize=1, TasksCompleted=0]
+? Assigned Task[ID=44, Pickup(655.8,1021.6), Delivery(21.3,648.1), Deadline=2026-07-09T02:53:24.485612200, Priority=0] to Drone[ID=17, Pos(583.4,806.7), Zone=6, CurrentTask=59, QueueSize=7, TasksCompleted=0]
+
+STEP 1: Centralized Task Table
+
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                        CENTRALIZED TASK TABLE                                   ║
+╠════╦══════════════════╦══════════════════╦════════════════════╣
+║ ID ║ Pickup (X, Y)    ║ Delivery (X, Y)  ║ Deadline           ║
+╠════╬══════════════════╬══════════════════╬════════════════════╣
+║  1 ║ (745.0, 699.6)      ║ (316.1, 283.7)      ║ 2026-07-09T02:16:24 ║
+║  2 ║ (93.5, 462.1)      ║ (390.8, 707.0)      ║ 2026-07-09T02:27:24 ║
+║  3 ║ (801.7, 941.4)      ║ (447.0, 767.9)      ║ 2026-07-09T02:07:24 ║
+║  4 ║ (817.4, 154.2)      ║ (346.4, 256.7)      ║ 2026-07-09T01:44:24 ║
+║  5 ║ (176.4, 601.5)      ║ (769.3, 584.7)      ║ 2026-07-09T02:32:24 ║
+║  6 ║ (92.8, 817.8)      ║ (324.1, 203.9)      ║ 2026-07-09T02:13:24 ║
+║  7 ║ (427.7, 997.4)      ║ (730.5, 492.1)      ║ 2026-07-09T01:29:24 ║
+║  8 ║ (224.8, 610.2)      ║ (193.3, 387.5)      ║ 2026-07-09T02:38:24 ║
+║  9 ║ (368.9, 445.1)      ║ (468.3, 484.0)      ║ 2026-07-09T00:57:24 ║
+║ 10 ║ (562.1, 38.3)      ║ (53.8, 807.5)      ║ 2026-07-09T02:16:24 ║
+║ 11 ║ (287.3, 200.7)      ║ (183.6, 886.5)      ║ 2026-07-09T02:53:24 ║
+║ 12 ║ (561.3, 8.3)      ║ (775.8, 646.2)      ║ 2026-07-09T02:23:24 ║
+║ 13 ║ (585.3, 379.9)      ║ (892.7, 825.1)      ║ 2026-07-09T01:43:24 ║
+║ 14 ║ (393.2, 117.7)      ║ (150.3, 298.6)      ║ 2026-07-09T01:09:24 ║
+║ 15 ║ (828.5, 643.0)      ║ (474.5, 312.9)      ║ 2026-07-09T02:09:24 ║
+║ 16 ║ (815.1, 710.7)      ║ (94.9, 809.7)      ║ 2026-07-09T02:20:24 ║
+║ 17 ║ (37.4, 495.5)      ║ (670.8, 405.3)      ║ 2026-07-09T02:38:24 ║
+║ 18 ║ (139.5, 837.0)      ║ (1001.0, 718.9)      ║ 2026-07-09T01:33:24 ║
+║ 19 ║ (613.2, 999.5)      ║ (78.9, 793.7)      ║ 2026-07-09T01:41:24 ║
+║ 20 ║ (1002.0, 185.2)      ║ (942.6, 284.1)      ║ 2026-07-09T01:19:24 ║
+║ 21 ║ (322.7, 453.4)      ║ (98.8, 763.0)      ║ 2026-07-09T01:09:24 ║
+║ 22 ║ (934.6, 297.0)      ║ (961.3, 304.5)      ║ 2026-07-09T01:20:24 ║
+║ 23 ║ (561.5, 289.0)      ║ (990.7, 926.2)      ║ 2026-07-09T01:39:24 ║
+║ 24 ║ (747.1, 9.2)      ║ (17.5, 310.4)      ║ 2026-07-09T01:22:24 ║
+║ 25 ║ (597.5, 704.8)      ║ (569.7, 118.5)      ║ 2026-07-09T01:30:24 ║
+║ 26 ║ (78.0, 910.0)      ║ (676.9, 723.1)      ║ 2026-07-09T01:24:24 ║
+║ 27 ║ (853.7, 266.4)      ║ (985.3, 407.1)      ║ 2026-07-09T02:08:24 ║
+║ 28 ║ (445.4, 967.0)      ║ (912.7, 132.2)      ║ 2026-07-09T01:42:24 ║
+║ 29 ║ (499.9, 370.1)      ║ (755.7, 875.9)      ║ 2026-07-09T01:35:24 ║
+║ 30 ║ (517.2, 96.0)      ║ (521.0, 876.2)      ║ 2026-07-09T01:03:24 ║
+║ 31 ║ (385.1, 883.5)      ║ (713.8, 164.0)      ║ 2026-07-09T01:00:24 ║
+║ 32 ║ (532.2, 443.2)      ║ (783.2, 658.0)      ║ 2026-07-09T02:05:24 ║
+║ 33 ║ (1008.6, 132.2)      ║ (628.8, 555.9)      ║ 2026-07-09T01:00:24 ║
+║ 34 ║ (612.0, 763.7)      ║ (771.4, 993.1)      ║ 2026-07-09T01:06:24 ║
+║ 35 ║ (397.1, 15.6)      ║ (105.4, 106.3)      ║ 2026-07-09T02:20:24 ║
+║ 36 ║ (468.9, 189.6)      ║ (702.2, 452.3)      ║ 2026-07-09T02:46:24 ║
+║ 37 ║ (433.4, 53.7)      ║ (617.4, 170.2)      ║ 2026-07-09T02:38:24 ║
+║ 38 ║ (3.8, 288.0)      ║ (549.2, 991.2)      ║ 2026-07-09T02:51:24 ║
+║ 39 ║ (871.5, 803.2)      ║ (296.8, 378.4)      ║ 2026-07-09T01:21:24 ║
+║ 40 ║ (15.4, 299.9)      ║ (338.0, 669.9)      ║ 2026-07-09T01:49:24 ║
+║ 41 ║ (445.0, 562.3)      ║ (590.6, 745.0)      ║ 2026-07-09T02:53:24 ║
+║ 42 ║ (468.0, 110.1)      ║ (965.2, 827.4)      ║ 2026-07-09T01:11:24 ║
+║ 43 ║ (860.3, 99.2)      ║ (935.2, 628.1)      ║ 2026-07-09T01:29:24 ║
+║ 44 ║ (655.8, 1021.6)      ║ (21.3, 648.1)      ║ 2026-07-09T02:53:24 ║
+║ 45 ║ (529.9, 76.5)      ║ (507.7, 180.1)      ║ 2026-07-09T01:55:24 ║
+║ 46 ║ (658.3, 476.2)      ║ (903.1, 477.8)      ║ 2026-07-09T01:45:24 ║
+║ 47 ║ (785.5, 538.4)      ║ (181.3, 729.7)      ║ 2026-07-09T02:50:24 ║
+║ 48 ║ (839.4, 657.6)      ║ (991.6, 304.9)      ║ 2026-07-09T01:46:24 ║
+║ 49 ║ (721.9, 311.0)      ║ (654.8, 579.4)      ║ 2026-07-09T01:51:24 ║
+║ 50 ║ (54.9, 644.4)      ║ (649.9, 334.5)      ║ 2026-07-09T01:39:24 ║
+║ 51 ║ (402.6, 465.6)      ║ (274.4, 494.0)      ║ 2026-07-09T02:55:24 ║
+║ 52 ║ (448.1, 873.5)      ║ (11.9, 222.5)      ║ 2026-07-09T01:11:24 ║
+║ 53 ║ (253.6, 647.6)      ║ (347.9, 671.4)      ║ 2026-07-09T00:57:24 ║
+║ 54 ║ (503.0, 744.6)      ║ (687.4, 101.1)      ║ 2026-07-09T02:24:24 ║
+║ 55 ║ (659.1, 967.4)      ║ (604.0, 763.4)      ║ 2026-07-09T02:10:24 ║
+║ 56 ║ (741.4, 270.0)      ║ (877.6, 10.4)      ║ 2026-07-09T01:20:24 ║
+║ 57 ║ (742.7, 691.7)      ║ (860.0, 492.1)      ║ 2026-07-09T02:31:24 ║
+║ 58 ║ (743.2, 749.4)      ║ (1000.6, 936.1)      ║ 2026-07-09T01:31:24 ║
+║ 59 ║ (432.2, 986.5)      ║ (966.9, 848.7)      ║ 2026-07-09T01:21:24 ║
+║ 60 ║ (428.4, 179.7)      ║ (192.8, 465.5)      ║ 2026-07-09T01:48:24 ║
+║ 61 ║ (615.3, 955.3)      ║ (989.4, 637.8)      ║ 2026-07-09T02:05:24 ║
+║ 62 ║ (712.5, 907.9)      ║ (592.3, 670.1)      ║ 2026-07-09T01:04:24 ║
+║ 63 ║ (102.9, 938.3)      ║ (207.0, 576.5)      ║ 2026-07-09T02:45:24 ║
+║ 64 ║ (242.9, 257.3)      ║ (99.4, 962.3)      ║ 2026-07-09T01:46:24 ║
+║ 65 ║ (625.5, 942.5)      ║ (34.5, 183.7)      ║ 2026-07-09T02:11:24 ║
+║ 66 ║ (150.4, 249.4)      ║ (203.2, 723.2)      ║ 2026-07-09T02:20:24 ║
+║ 67 ║ (745.1, 29.4)      ║ (832.1, 393.8)      ║ 2026-07-09T01:00:24 ║
+║ 68 ║ (235.7, 390.7)      ║ (190.0, 910.5)      ║ 2026-07-09T01:26:24 ║
+║ 69 ║ (12.5, 158.7)      ║ (138.5, 691.0)      ║ 2026-07-09T02:16:24 ║
+║ 70 ║ (301.7, 644.7)      ║ (104.0, 319.4)      ║ 2026-07-09T01:14:24 ║
+║ 71 ║ (147.8, 464.2)      ║ (151.4, 755.4)      ║ 2026-07-09T02:56:24 ║
+║ 72 ║ (933.2, 213.5)      ║ (885.1, 320.9)      ║ 2026-07-09T01:36:24 ║
+║ 73 ║ (24.2, 468.1)      ║ (316.8, 159.2)      ║ 2026-07-09T02:21:24 ║
+║ 74 ║ (748.2, 947.9)      ║ (815.7, 230.2)      ║ 2026-07-09T02:44:24 ║
+║ 75 ║ (725.2, 722.4)      ║ (531.7, 711.2)      ║ 2026-07-09T01:28:24 ║
+╚════╩══════════════════╩══════════════════╩════════════════════╝
+
+
+STEP 2: Zonal Task Distribution Tables
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                         ZONE DISTRIBUTION                             ║
+╠═════╦═════════════════╦═════════════════╦══════════╦════════════════╣
+║ ID  ║ Center (X, Y)   ║ Radius          ║ Tasks    ║ Assigned Drones║
+╠═════╬═════════════════╬═════════════════╬══════════╬════════════════╣
+║ Z1  ║ (536.9, 560.1)    ║ 6.0         ║ 4        ║ 3              ║
+║ Z2  ║ (766.0, 436.7)    ║ 6.0         ║ 21       ║ 3              ║
+║ Z3  ║ (353.1, 581.6)    ║ 6.0         ║ 8        ║ 3              ║
+║ Z4  ║ (601.1, 159.5)    ║ 271.5         ║ 6        ║ 3              ║
+║ Z5  ║ (225.3, 465.0)    ║ 162.5         ║ 20       ║ 3              ║
+║ Z6  ║ (588.4, 798.0)    ║ 232.9         ║ 16       ║ 3              ║
+╚═════╩═════════════════╩═════════════════╩══════════╩════════════════╝
+
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                      ZONE TOKEN DISTRIBUTION                          ║
+╠═════╦═════════╦═══════════════════════════════════════════════════════╣
+║ ID  ║ Token   ║ Drone IDs                                                   ║
+╠═════╬═════════╬═══════════════════════════════════════════════════════╣
+║ Z1  ║ Token A║ D1, D2, D3                                                   ║
+║ Z2  ║ Token B║ D4, D5, D6                                                   ║
+║ Z3  ║ Token C║ D7, D8, D9                                                   ║
+║ Z4  ║ Token D║ D10, D11, D12                                                ║
+║ Z5  ║ Token E║ D13, D14, D15                                                ║
+║ Z6  ║ Token F║ D16, D17, D18                                                ║
+╚═════╩═════════╩═══════════════════════════════════════════════════════╝
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              ZONE 1 - TASKS PRIORITIZED BY DEADLINE                       ║
+╠════╦═════════════════╦═════════════════╦══════════════╦═════════════════╦══════════════╣
+║ ID ║ Pickup (X, Y)  ║ Delivery (X, Y) ║ Time Left(min)║ Assigned Drone  ║ Status       ║
+╠════╬═════════════════╬═════════════════╬══════════════╬═════════════════╬══════════════╣
+║ 31 ║ (385.1, 883.5)  ║ (713.8, 164.0) ║ 62           ║ D2              ║ COMPLETED    ║
+║ 39 ║ (871.5, 803.2)  ║ (296.8, 378.4) ║ 83           ║ D1              ║ COMPLETED    ║
+║  1 ║ (745.0, 699.6)  ║ (316.1, 283.7) ║ 138          ║ D1              ║ COMPLETED    ║
+║ 47 ║ (785.5, 538.4)  ║ (181.3, 729.7) ║ 172          ║ D1              ║ COMPLETED    ║
+╚════╩═════════════════╩═════════════════╩══════════════╩═════════════════╝
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              ZONE 2 - TASKS PRIORITIZED BY DEADLINE                       ║
+╠════╦═════════════════╦═════════════════╦══════════════╦═════════════════╦══════════════╣
+║ ID ║ Pickup (X, Y)  ║ Delivery (X, Y) ║ Time Left(min)║ Assigned Drone  ║ Status       ║
+╠════╬═════════════════╬═════════════════╬══════════════╬═════════════════╬══════════════╣
+║ 33 ║ (1008.6, 132.2)  ║ (628.8, 555.9) ║ 62           ║ D4              ║ COMPLETED    ║
+║ 42 ║ (468.0, 110.1)  ║ (965.2, 827.4) ║ 73           ║ D6              ║ COMPLETED    ║
+║ 20 ║ (1002.0, 185.2)  ║ (942.6, 284.1) ║ 81           ║ D4              ║ COMPLETED    ║
+║ 22 ║ (934.6, 297.0)  ║ (961.3, 304.5) ║ 82           ║ D4              ║ COMPLETED    ║
+║ 43 ║ (860.3, 99.2)  ║ (935.2, 628.1) ║ 91           ║ D6              ║ COMPLETED    ║
+║ 25 ║ (597.5, 704.8)  ║ (569.7, 118.5) ║ 92           ║ D5              ║ COMPLETED    ║
+║ 72 ║ (933.2, 213.5)  ║ (885.1, 320.9) ║ 98           ║ D4              ║ COMPLETED    ║
+║ 23 ║ (561.5, 289.0)  ║ (990.7, 926.2) ║ 101          ║ D6              ║ COMPLETED    ║
+║ 28 ║ (445.4, 967.0)  ║ (912.7, 132.2) ║ 104          ║ D5              ║ COMPLETED    ║
+║ 13 ║ (585.3, 379.9)  ║ (892.7, 825.1) ║ 105          ║ D6              ║ COMPLETED    ║
+║ 46 ║ (658.3, 476.2)  ║ (903.1, 477.8) ║ 107          ║ D5              ║ COMPLETED    ║
+║ 48 ║ (839.4, 657.6)  ║ (991.6, 304.9) ║ 108          ║ D5              ║ COMPLETED    ║
+║ 49 ║ (721.9, 311.0)  ║ (654.8, 579.4) ║ 113          ║ D6              ║ COMPLETED    ║
+║ 32 ║ (532.2, 443.2)  ║ (783.2, 658.0) ║ 127          ║ D5              ║ COMPLETED    ║
+║ 27 ║ (853.7, 266.4)  ║ (985.3, 407.1) ║ 130          ║ D6              ║ COMPLETED    ║
+║ 15 ║ (828.5, 643.0)  ║ (474.5, 312.9) ║ 131          ║ D5              ║ COMPLETED    ║
+║ 12 ║ (561.3, 8.3)  ║ (775.8, 646.2) ║ 145          ║ D6              ║ COMPLETED    ║
+║ 54 ║ (503.0, 744.6)  ║ (687.4, 101.1) ║ 146          ║ D5              ║ COMPLETED    ║
+║ 57 ║ (742.7, 691.7)  ║ (860.0, 492.1) ║ 153          ║ D5              ║ COMPLETED    ║
+║ 74 ║ (748.2, 947.9)  ║ (815.7, 230.2) ║ 166          ║ D5              ║ COMPLETED    ║
+║ 36 ║ (468.9, 189.6)  ║ (702.2, 452.3) ║ 168          ║ D6              ║ COMPLETED    ║
+╚════╩═════════════════╩═════════════════╩══════════════╩═════════════════╝
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              ZONE 3 - TASKS PRIORITIZED BY DEADLINE                       ║
+╠════╦═════════════════╦═════════════════╦══════════════╦═════════════════╦══════════════╣
+║ ID ║ Pickup (X, Y)  ║ Delivery (X, Y) ║ Time Left(min)║ Assigned Drone  ║ Status       ║
+╠════╬═════════════════╬═════════════════╬══════════════╬═════════════════╬══════════════╣
+║  9 ║ (368.9, 445.1)  ║ (468.3, 484.0) ║ 59           ║ D9              ║ COMPLETED    ║
+║ 53 ║ (253.6, 647.6)  ║ (347.9, 671.4) ║ 59           ║ D8              ║ COMPLETED    ║
+║ 30 ║ (517.2, 96.0)  ║ (521.0, 876.2) ║ 65           ║ D9              ║ COMPLETED    ║
+║ 50 ║ (54.9, 644.4)  ║ (649.9, 334.5) ║ 101          ║ D8              ║ COMPLETED    ║
+║ 65 ║ (625.5, 942.5)  ║ (34.5, 183.7) ║ 133          ║ D7              ║ COMPLETED    ║
+║  5 ║ (176.4, 601.5)  ║ (769.3, 584.7) ║ 154          ║ D8              ║ COMPLETED    ║
+║ 63 ║ (102.9, 938.3)  ║ (207.0, 576.5) ║ 167          ║ D8              ║ COMPLETED    ║
+║ 38 ║ (3.8, 288.0)  ║ (549.2, 991.2) ║ 173          ║ D9              ║ COMPLETED    ║
+╚════╩═════════════════╩═════════════════╩══════════════╩═════════════════╝
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              ZONE 4 - TASKS PRIORITIZED BY DEADLINE                       ║
+╠════╦═════════════════╦═════════════════╦══════════════╦═════════════════╦══════════════╣
+║ ID ║ Pickup (X, Y)  ║ Delivery (X, Y) ║ Time Left(min)║ Assigned Drone  ║ Status       ║
+╠════╬═════════════════╬═════════════════╬══════════════╬═════════════════╬══════════════╣
+║ 67 ║ (745.1, 29.4)  ║ (832.1, 393.8) ║ 62           ║ D10             ║ COMPLETED    ║
+║ 56 ║ (741.4, 270.0)  ║ (877.6, 10.4) ║ 82           ║ D10             ║ COMPLETED    ║
+║ 24 ║ (747.1, 9.2)  ║ (17.5, 310.4) ║ 84           ║ D10             ║ COMPLETED    ║
+║  4 ║ (817.4, 154.2)  ║ (346.4, 256.7) ║ 106          ║ D10             ║ COMPLETED    ║
+║ 45 ║ (529.9, 76.5)  ║ (507.7, 180.1) ║ 117          ║ D12             ║ COMPLETED    ║
+║ 37 ║ (433.4, 53.7)  ║ (617.4, 170.2) ║ 160          ║ D12             ║ COMPLETED    ║
+╚════╩═════════════════╩═════════════════╩══════════════╩═════════════════╝
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              ZONE 5 - TASKS PRIORITIZED BY DEADLINE                       ║
+╠════╦═════════════════╦═════════════════╦══════════════╦═════════════════╦══════════════╣
+║ ID ║ Pickup (X, Y)  ║ Delivery (X, Y) ║ Time Left(min)║ Assigned Drone  ║ Status       ║
+╠════╬═════════════════╬═════════════════╬══════════════╬═════════════════╬══════════════╣
+║ 14 ║ (393.2, 117.7)  ║ (150.3, 298.6) ║ 71           ║ D15             ║ COMPLETED    ║
+║ 21 ║ (322.7, 453.4)  ║ (98.8, 763.0) ║ 71           ║ D13             ║ COMPLETED    ║
+║ 52 ║ (448.1, 873.5)  ║ (11.9, 222.5) ║ 73           ║ D14             ║ COMPLETED    ║
+║ 70 ║ (301.7, 644.7)  ║ (104.0, 319.4) ║ 76           ║ D14             ║ COMPLETED    ║
+║ 68 ║ (235.7, 390.7)  ║ (190.0, 910.5) ║ 88           ║ D15             ║ COMPLETED    ║
+║ 64 ║ (242.9, 257.3)  ║ (99.4, 962.3) ║ 108          ║ D15             ║ COMPLETED    ║
+║ 60 ║ (428.4, 179.7)  ║ (192.8, 465.5) ║ 110          ║ D13             ║ COMPLETED    ║
+║ 40 ║ (15.4, 299.9)  ║ (338.0, 669.9) ║ 111          ║ D15             ║ COMPLETED    ║
+║  6 ║ (92.8, 817.8)  ║ (324.1, 203.9) ║ 135          ║ D14             ║ COMPLETED    ║
+║ 10 ║ (562.1, 38.3)  ║ (53.8, 807.5) ║ 138          ║ D13             ║ COMPLETED    ║
+║ 69 ║ (12.5, 158.7)  ║ (138.5, 691.0) ║ 138          ║ D15             ║ COMPLETED    ║
+║ 35 ║ (397.1, 15.6)  ║ (105.4, 106.3) ║ 142          ║ D15             ║ COMPLETED    ║
+║ 66 ║ (150.4, 249.4)  ║ (203.2, 723.2) ║ 142          ║ D15             ║ COMPLETED    ║
+║ 73 ║ (24.2, 468.1)  ║ (316.8, 159.2) ║ 143          ║ D14             ║ COMPLETED    ║
+║  2 ║ (93.5, 462.1)  ║ (390.8, 707.0) ║ 149          ║ D15             ║ COMPLETED    ║
+║  8 ║ (224.8, 610.2)  ║ (193.3, 387.5) ║ 160          ║ D14             ║ COMPLETED    ║
+║ 17 ║ (37.4, 495.5)  ║ (670.8, 405.3) ║ 160          ║ D14             ║ COMPLETED    ║
+║ 11 ║ (287.3, 200.7)  ║ (183.6, 886.5) ║ 175          ║ D15             ║ COMPLETED    ║
+║ 51 ║ (402.6, 465.6)  ║ (274.4, 494.0) ║ 177          ║ D13             ║ COMPLETED    ║
+║ 71 ║ (147.8, 464.2)  ║ (151.4, 755.4) ║ 178          ║ D15             ║ COMPLETED    ║
+╚════╩═════════════════╩═════════════════╩══════════════╩═════════════════╝
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              ZONE 6 - TASKS PRIORITIZED BY DEADLINE                       ║
+╠════╦═════════════════╦═════════════════╦══════════════╦═════════════════╦══════════════╣
+║ ID ║ Pickup (X, Y)  ║ Delivery (X, Y) ║ Time Left(min)║ Assigned Drone  ║ Status       ║
+╠════╬═════════════════╬═════════════════╬══════════════╬═════════════════╬══════════════╣
+║ 62 ║ (712.5, 907.9)  ║ (592.3, 670.1) ║ 66           ║ D16             ║ COMPLETED    ║
+║ 34 ║ (612.0, 763.7)  ║ (771.4, 993.1) ║ 68           ║ D16             ║ COMPLETED    ║
+║ 59 ║ (432.2, 986.5)  ║ (966.9, 848.7) ║ 83           ║ D17             ║ COMPLETED    ║
+║ 26 ║ (78.0, 910.0)  ║ (676.9, 723.1) ║ 86           ║ D17             ║ COMPLETED    ║
+║ 75 ║ (725.2, 722.4)  ║ (531.7, 711.2) ║ 90           ║ D16             ║ COMPLETED    ║
+║  7 ║ (427.7, 997.4)  ║ (730.5, 492.1) ║ 91           ║ D17             ║ COMPLETED    ║
+║ 58 ║ (743.2, 749.4)  ║ (1000.6, 936.1) ║ 93           ║ D16             ║ COMPLETED    ║
+║ 18 ║ (139.5, 837.0)  ║ (1001.0, 718.9) ║ 95           ║ D17             ║ COMPLETED    ║
+║ 29 ║ (499.9, 370.1)  ║ (755.7, 875.9) ║ 97           ║ D18             ║ COMPLETED    ║
+║ 19 ║ (613.2, 999.5)  ║ (78.9, 793.7) ║ 103          ║ D17             ║ COMPLETED    ║
+║ 61 ║ (615.3, 955.3)  ║ (989.4, 637.8) ║ 127          ║ D17             ║ COMPLETED    ║
+║  3 ║ (801.7, 941.4)  ║ (447.0, 767.9) ║ 129          ║ D16             ║ COMPLETED    ║
+║ 55 ║ (659.1, 967.4)  ║ (604.0, 763.4) ║ 132          ║ D17             ║ COMPLETED    ║
+║ 16 ║ (815.1, 710.7)  ║ (94.9, 809.7) ║ 142          ║ D16             ║ COMPLETED    ║
+║ 41 ║ (445.0, 562.3)  ║ (590.6, 745.0) ║ 175          ║ D18             ║ COMPLETED    ║
+║ 44 ║ (655.8, 1021.6)  ║ (21.3, 648.1) ║ 175          ║ D17             ║ COMPLETED    ║
+╚════╩═════════════════╩═════════════════╩══════════════╩═════════════════╝
+
+
+STEP 3: Token Passing Flow Charts for All Zones
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ZONE TOKEN PASSING FLOW CHARTS                           ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+
+Zone 1  -  Token A
+Sequence: D1 T31  ->  D2 T39  ->  D3 T1  ->  D1 T47
+
+  [ Token A ]
+   |
+   v
+  [ D1 T31 ]
+   |
+   v
+  [ D2 T39 ]
+   |
+   v
+  [ D3 T1 ]
+   |
+   v
+  [ D1 T47 ]
+
+---
+
+Zone 2  -  Token B
+Sequence: D4 T33  ->  D5 T42  ->  D6 T20  ->  D6 T22  ->  D6 T43  ->  D4 T25  ->  D5 T72  ->  D5 T23  ->  D6 T28  ->  D4 T13  ->  D5 T46  ->  D6 T48  ->  D4 T49  ->  D5 T32  ->  D4 T27  ->  D6 T15  ->  D5 T12  ->  D4 T54  ->  D6 T57  ->  D5 T74  ->  D4 T36
+
+  [ Token B ]
+   |
+   v
+  [ D4 T33 ]
+   |
+   v
+  [ D5 T42 ]
+   |
+   v
+  [ D6 T20 ]
+   |
+   v
+  [ D6 T22 ]
+   |
+   v
+  [ D6 T43 ]
+   |
+   v
+  [ D4 T25 ]
+   |
+   v
+  [ D5 T72 ]
+   |
+   v
+  [ D5 T23 ]
+   |
+   v
+  [ D6 T28 ]
+   |
+   v
+  [ D4 T13 ]
+   |
+   v
+  [ D5 T46 ]
+   |
+   v
+  [ D6 T48 ]
+   |
+   v
+  [ D4 T49 ]
+   |
+   v
+  [ D5 T32 ]
+   |
+   v
+  [ D4 T27 ]
+   |
+   v
+  [ D6 T15 ]
+   |
+   v
+  [ D5 T12 ]
+   |
+   v
+  [ D4 T54 ]
+   |
+   v
+  [ D6 T57 ]
+   |
+   v
+  [ D5 T74 ]
+   |
+   v
+  [ D4 T36 ]
+
+---
+
+Zone 3  -  Token C
+Sequence: D7 T9  ->  D8 T53  ->  D9 T30  ->  D7 T50  ->  D8 T65  ->  D9 T5  ->  D7 T63  ->  D8 T38
+
+  [ Token C ]
+   |
+   v
+  [ D7 T9 ]
+   |
+   v
+  [ D8 T53 ]
+   |
+   v
+  [ D9 T30 ]
+   |
+   v
+  [ D7 T50 ]
+   |
+   v
+  [ D8 T65 ]
+   |
+   v
+  [ D9 T5 ]
+   |
+   v
+  [ D7 T63 ]
+   |
+   v
+  [ D8 T38 ]
+
+---
+
+Zone 4  -  Token D
+Sequence: D10 T67  ->  D11 T56  ->  D12 T24  ->  D11 T4  ->  D10 T45  ->  D12 T37
+
+  [ Token D ]
+   |
+   v
+  [ D10 T67 ]
+   |
+   v
+  [ D11 T56 ]
+   |
+   v
+  [ D12 T24 ]
+   |
+   v
+  [ D11 T4 ]
+   |
+   v
+  [ D10 T45 ]
+   |
+   v
+  [ D12 T37 ]
+
+---
+
+Zone 5  -  Token E
+Sequence: D13 T14  ->  D14 T21  ->  D15 T52  ->  D13 T70  ->  D14 T68  ->  D15 T64  ->  D13 T60  ->  D14 T40  ->  D15 T6  ->  D13 T10  ->  D14 T69  ->  D15 T35  ->  D13 T66  ->  D15 T73  ->  D14 T2  ->  D13 T8  ->  D15 T17  ->  D14 T11  ->  D13 T51  ->  D13 T71
+
+  [ Token E ]
+   |
+   v
+  [ D13 T14 ]
+   |
+   v
+  [ D14 T21 ]
+   |
+   v
+  [ D15 T52 ]
+   |
+   v
+  [ D13 T70 ]
+   |
+   v
+  [ D14 T68 ]
+   |
+   v
+  [ D15 T64 ]
+   |
+   v
+  [ D13 T60 ]
+   |
+   v
+  [ D14 T40 ]
+   |
+   v
+  [ D15 T6 ]
+   |
+   v
+  [ D13 T10 ]
+   |
+   v
+  [ D14 T69 ]
+   |
+   v
+  [ D15 T35 ]
+   |
+   v
+  [ D13 T66 ]
+   |
+   v
+  [ D15 T73 ]
+   |
+   v
+  [ D14 T2 ]
+   |
+   v
+  [ D13 T8 ]
+   |
+   v
+  [ D15 T17 ]
+   |
+   v
+  [ D14 T11 ]
+   |
+   v
+  [ D13 T51 ]
+   |
+   v
+  [ D13 T71 ]
+
+---
+
+Zone 6  -  Token F
+Sequence: D16 T62  ->  D17 T34  ->  D18 T59  ->  D16 T26  ->  D17 T75  ->  D18 T7  ->  D17 T58  ->  D16 T18  ->  D17 T29  ->  D18 T19  ->  D16 T61  ->  D17 T3  ->  D18 T55  ->  D18 T16  ->  D16 T41  ->  D17 T44
+
+  [ Token F ]
+   |
+   v
+  [ D16 T62 ]
+   |
+   v
+  [ D17 T34 ]
+   |
+   v
+  [ D18 T59 ]
+   |
+   v
+  [ D16 T26 ]
+   |
+   v
+  [ D17 T75 ]
+   |
+   v
+  [ D18 T7 ]
+   |
+   v
+  [ D17 T58 ]
+   |
+   v
+  [ D16 T18 ]
+   |
+   v
+  [ D17 T29 ]
+   |
+   v
+  [ D18 T19 ]
+   |
+   v
+  [ D16 T61 ]
+   |
+   v
+  [ D17 T3 ]
+   |
+   v
+  [ D18 T55 ]
+   |
+   v
+  [ D18 T16 ]
+   |
+   v
+  [ D16 T41 ]
+   |
+   v
+  [ D17 T44 ]
+
+---
+Note: Arrows represent the logical token handoff order among drones in the zone.
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+STEP 4: Multi-Token Execution Table
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                      MULTI-TOKEN EXECUTION TABLE                                               ║
+╠══════╦════════════════╦══════════════════╦════════════════════╦══════════════════════╣
+║ Zone ║ Token          ║ Parallel Drones  ║ Feasible Tasks     ║ Total Tasks          ║
+╠══════╬════════════════╬══════════════════╬════════════════════╬══════════════════════╣
+║ Z1  ║ Token A        ║ 3               ║ 4                 ║ 4                   ║
+║ Z2  ║ Token B        ║ 3               ║ 5                 ║ 21                  ║
+║ Z3  ║ Token C        ║ 3               ║ 5                 ║ 8                   ║
+║ Z4  ║ Token D        ║ 3               ║ 5                 ║ 6                   ║
+║ Z5  ║ Token E        ║ 3               ║ 6                 ║ 20                  ║
+║ Z6  ║ Token F        ║ 3               ║ 6                 ║ 16                  ║
+╚══════╩════════════════╩══════════════════╩════════════════════╩══════════════════════╝
+
+
+STEP 5: Parallel Zone Multi-Token Execution Report
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                    PARALLEL ZONE MULTI-TOKEN EXECUTION REPORT                                      ║
+╠══════╦════════════════╦════════════════════════════════════════╦══════╦══════════════════╦══════════════════════╦══════════════════════╦══════════════════╣
+║ Zone ║ Token          ║ Drones                                         ║ Task ║ Status           ║ Time Left (min)      ║ Path Covered         ║ Deadline Met     ║
+╠══════╬════════════════╬════════════════════════════════════════╬══════╬══════════════════╬══════════════════════╬══════════════════════╬══════════════════╣
+║ Z1  ║ Token A        ║ D2                                            ║ T31 ║ COMPLETED       ║ 62                  ║ 1138.45             ║ YES           ║
+║ Z1  ║ Token A        ║ D1                                            ║ T39 ║ COMPLETED       ║ 83                  ║ 1120.21             ║ YES           ║
+║ Z1  ║ Token A        ║ D1                                            ║ T1  ║ COMPLETED       ║ 138                 ║ 839.77              ║ YES           ║
+║ Z1  ║ Token A        ║ D1                                            ║ T47 ║ COMPLETED       ║ 172                 ║ 873.45              ║ YES           ║
+║ Z2  ║ Token B        ║ D4                                            ║ T33 ║ COMPLETED       ║ 62                  ║ 952.16              ║ YES           ║
+║ Z2  ║ Token B        ║ D6                                            ║ T42 ║ COMPLETED       ║ 73                  ║ 1305.20             ║ YES           ║
+║ Z2  ║ Token B        ║ D4                                            ║ T20 ║ COMPLETED       ║ 81                  ║ 453.53              ║ YES           ║
+║ Z2  ║ Token B        ║ D4                                            ║ T22 ║ COMPLETED       ║ 82                  ║ 239.03              ║ YES           ║
+║ Z2  ║ Token B        ║ D6                                            ║ T43 ║ COMPLETED       ║ 91                  ║ 877.78              ║ YES           ║
+║ Z2  ║ Token B        ║ D5                                            ║ T25 ║ COMPLETED       ║ 92                  ║ 893.52              ║ YES           ║
+║ Z2  ║ Token B        ║ D4                                            ║ T72 ║ COMPLETED       ║ 98                  ║ 390.74              ║ YES           ║
+║ Z2  ║ Token B        ║ D6                                            ║ T23 ║ COMPLETED       ║ 101                 ║ 1011.53             ║ YES           ║
+║ Z2  ║ Token B        ║ D5                                            ║ T28 ║ COMPLETED       ║ 104                 ║ 1566.28             ║ YES           ║
+║ Z2  ║ Token B        ║ D6                                            ║ T13 ║ COMPLETED       ║ 105                 ║ 723.13              ║ YES           ║
+║ Z2  ║ Token B        ║ D5                                            ║ T46 ║ COMPLETED       ║ 107                 ║ 352.06              ║ YES           ║
+║ Z2  ║ Token B        ║ D5                                            ║ T48 ║ COMPLETED       ║ 108                 ║ 610.42              ║ YES           ║
+║ Z2  ║ Token B        ║ D6                                            ║ T49 ║ COMPLETED       ║ 113                 ║ 400.13              ║ YES           ║
+║ Z2  ║ Token B        ║ D5                                            ║ T32 ║ COMPLETED       ║ 127                 ║ 559.20              ║ YES           ║
+║ Z2  ║ Token B        ║ D6                                            ║ T27 ║ COMPLETED       ║ 130                 ║ 378.95              ║ YES           ║
+║ Z2  ║ Token B        ║ D5                                            ║ T15 ║ COMPLETED       ║ 131                 ║ 692.87              ║ YES           ║
+║ Z2  ║ Token B        ║ D6                                            ║ T12 ║ COMPLETED       ║ 145                 ║ 1137.74             ║ YES           ║
+║ Z2  ║ Token B        ║ D5                                            ║ T54 ║ COMPLETED       ║ 146                 ║ 1064.51             ║ YES           ║
+║ Z2  ║ Token B        ║ D5                                            ║ T57 ║ COMPLETED       ║ 153                 ║ 478.61              ║ YES           ║
+║ Z2  ║ Token B        ║ D5                                            ║ T74 ║ COMPLETED       ║ 166                 ║ 1223.58             ║ YES           ║
+║ Z2  ║ Token B        ║ D6                                            ║ T36 ║ COMPLETED       ║ 168                 ║ 728.52              ║ YES           ║
+║ Z3  ║ Token C        ║ D9                                            ║ T9  ║ COMPLETED       ║ 59                  ║ 236.27              ║ YES           ║
+║ Z3  ║ Token C        ║ D8                                            ║ T53 ║ COMPLETED       ║ 59                  ║ 207.91              ║ YES           ║
+║ Z3  ║ Token C        ║ D9                                            ║ T30 ║ COMPLETED       ║ 65                  ║ 1286.23             ║ YES           ║
+║ Z3  ║ Token C        ║ D8                                            ║ T50 ║ COMPLETED       ║ 101                 ║ 969.09              ║ YES           ║
+║ Z3  ║ Token C        ║ D7                                            ║ T65 ║ COMPLETED       ║ 133                 ║ 1407.89             ║ YES           ║
+║ Z3  ║ Token C        ║ D8                                            ║ T5  ║ COMPLETED       ║ 154                 ║ 765.35              ║ YES           ║
+║ Z3  ║ Token C        ║ D8                                            ║ T63 ║ COMPLETED       ║ 167                 ║ 802.23              ║ YES           ║
+║ Z3  ║ Token C        ║ D9                                            ║ T38 ║ COMPLETED       ║ 173                 ║ 1336.74             ║ YES           ║
+║ Z4  ║ Token D        ║ D10                                           ║ T67 ║ COMPLETED       ║ 62                  ║ 561.41              ║ YES           ║
+║ Z4  ║ Token D        ║ D10                                           ║ T56 ║ COMPLETED       ║ 82                  ║ 463.97              ║ YES           ║
+║ Z4  ║ Token D        ║ D10                                           ║ T24 ║ COMPLETED       ║ 84                  ║ 992.13              ║ YES           ║
+║ Z4  ║ Token D        ║ D10                                           ║ T4  ║ COMPLETED       ║ 106                 ║ 688.48              ║ YES           ║
+║ Z4  ║ Token D        ║ D12                                           ║ T45 ║ COMPLETED       ║ 117                 ║ 205.49              ║ YES           ║
+║ Z4  ║ Token D        ║ D12                                           ║ T37 ║ COMPLETED       ║ 160                 ║ 407.33              ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T14 ║ COMPLETED       ║ 71                  ║ 683.17              ║ YES           ║
+║ Z5  ║ Token E        ║ D13                                           ║ T21 ║ COMPLETED       ║ 71                  ║ 470.35              ║ YES           ║
+║ Z5  ║ Token E        ║ D14                                           ║ T52 ║ COMPLETED       ║ 73                  ║ 1243.85             ║ YES           ║
+║ Z5  ║ Token E        ║ D14                                           ║ T70 ║ COMPLETED       ║ 76                  ║ 570.04              ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T68 ║ COMPLETED       ║ 88                  ║ 589.32              ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T64 ║ COMPLETED       ║ 108                 ║ 919.68              ║ YES           ║
+║ Z5  ║ Token E        ║ D13                                           ║ T60 ║ COMPLETED       ║ 110                 ║ 714.89              ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T40 ║ COMPLETED       ║ 111                 ║ 748.72              ║ YES           ║
+║ Z5  ║ Token E        ║ D14                                           ║ T6  ║ COMPLETED       ║ 135                 ║ 1022.98             ║ YES           ║
+║ Z5  ║ Token E        ║ D13                                           ║ T10 ║ COMPLETED       ║ 138                 ║ 1459.54             ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T69 ║ COMPLETED       ║ 138                 ║ 910.00              ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T35 ║ COMPLETED       ║ 142                 ║ 780.43              ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T66 ║ COMPLETED       ║ 142                 ║ 695.19              ║ YES           ║
+║ Z5  ║ Token E        ║ D14                                           ║ T73 ║ COMPLETED       ║ 143                 ║ 621.73              ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T2  ║ COMPLETED       ║ 149                 ║ 512.09              ║ YES           ║
+║ Z5  ║ Token E        ║ D14                                           ║ T8  ║ COMPLETED       ║ 160                 ║ 361.45              ║ YES           ║
+║ Z5  ║ Token E        ║ D14                                           ║ T17 ║ COMPLETED       ║ 160                 ║ 824.03              ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T11 ║ COMPLETED       ║ 175                 ║ 957.94              ║ YES           ║
+║ Z5  ║ Token E        ║ D13                                           ║ T51 ║ COMPLETED       ║ 177                 ║ 298.60              ║ YES           ║
+║ Z5  ║ Token E        ║ D15                                           ║ T71 ║ COMPLETED       ║ 178                 ║ 364.08              ║ YES           ║
+║ Z6  ║ Token F        ║ D16                                           ║ T62 ║ COMPLETED       ║ 66                  ║ 424.91              ║ YES           ║
+║ Z6  ║ Token F        ║ D16                                           ║ T34 ║ COMPLETED       ║ 68                  ║ 316.30              ║ YES           ║
+║ Z6  ║ Token F        ║ D17                                           ║ T59 ║ COMPLETED       ║ 83                  ║ 787.12              ║ YES           ║
+║ Z6  ║ Token F        ║ D17                                           ║ T26 ║ COMPLETED       ║ 86                  ║ 1143.25             ║ YES           ║
+║ Z6  ║ Token F        ║ D16                                           ║ T75 ║ COMPLETED       ║ 90                  ║ 341.48              ║ YES           ║
+║ Z6  ║ Token F        ║ D17                                           ║ T7  ║ COMPLETED       ║ 91                  ║ 835.28              ║ YES           ║
+║ Z6  ║ Token F        ║ D16                                           ║ T58 ║ COMPLETED       ║ 93                  ║ 470.70              ║ YES           ║
+║ Z6  ║ Token F        ║ D17                                           ║ T18 ║ COMPLETED       ║ 95                  ║ 1314.54             ║ YES           ║
+║ Z6  ║ Token F        ║ D18                                           ║ T29 ║ COMPLETED       ║ 97                  ║ 994.22              ║ YES           ║
+║ Z6  ║ Token F        ║ D17                                           ║ T19 ║ COMPLETED       ║ 103                 ║ 767.56              ║ YES           ║
+║ Z6  ║ Token F        ║ D17                                           ║ T61 ║ COMPLETED       ║ 127                 ║ 642.63              ║ YES           ║
+║ Z6  ║ Token F        ║ D16                                           ║ T3  ║ COMPLETED       ║ 129                 ║ 643.62              ║ YES           ║
+║ Z6  ║ Token F        ║ D17                                           ║ T55 ║ COMPLETED       ║ 132                 ║ 388.92              ║ YES           ║
+║ Z6  ║ Token F        ║ D16                                           ║ T16 ║ COMPLETED       ║ 142                 ║ 960.65              ║ YES           ║
+║ Z6  ║ Token F        ║ D18                                           ║ T41 ║ COMPLETED       ║ 175                 ║ 499.42              ║ YES           ║
+║ Z6  ║ Token F        ║ D17                                           ║ T44 ║ COMPLETED       ║ 175                 ║ 963.05              ║ YES           ║
+╚══════╩════════════════╩════════════════════════════════════════╩══════╩══════════════════╩══════════════════════╩══════════════════════╩══════════════════╝
+
+
+STEP 6: Drone Path Travelled Report
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                           DRONE PATH TRAVELLED REPORT                                             ║
+╠══════╦══════════════════════╦══════════════════════════════════════════════════════════════════════════════╣
+║ Drone║ Assigned Tasks        ║ Path Covered (units)                                                                  ║
+╠══════╬══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║ D1   ║ T1, T39, T47        ║ 3462.92                                                                         ║
+║ D2   ║ T31                 ║ 1138.45                                                                         ║
+║ D3   ║                     ║ 0.00                                                                            ║
+║ D4   ║ T20, T22, T33, T72  ║ 1819.93                                                                         ║
+║ D5   ║ T15, T25, T28, T32, T46, T48, T54, T57, T74║ 8708.42                                                                         ║
+║ D6   ║ T12, T13, T23, T27, T36, T42, T43, T49║ 8399.28                                                                         ║
+║ D7   ║ T65                 ║ 1407.89                                                                         ║
+║ D8   ║ T5, T50, T53, T63   ║ 3494.33                                                                         ║
+║ D9   ║ T9, T30, T38        ║ 3080.58                                                                         ║
+║ D10  ║ T4, T24, T56, T67   ║ 3475.54                                                                         ║
+║ D11  ║                     ║ 0.00                                                                            ║
+║ D12  ║ T37, T45            ║ 641.40                                                                          ║
+║ D13  ║ T10, T21, T51, T60  ║ 3563.23                                                                         ║
+║ D14  ║ T6, T8, T17, T52, T70, T73║ 5284.74                                                                         ║
+║ D15  ║ T2, T11, T14, T35, T40, T64, T66, T68, T69, T71║ 9235.31                                                                         ║
+║ D16  ║ T3, T16, T34, T58, T62, T75║ 3997.46                                                                         ║
+║ D17  ║ T7, T18, T19, T26, T44, T55, T59, T61║ 7835.96                                                                         ║
+║ D18  ║ T29, T41            ║ 1669.14                                                                         ║
+╠══════╬══════════════════════╬══════════════════════════════════════════════════════════════════════════════╣
+║ TOTAL ║                     ║ 67214.57                                                                        ║
+╚══════╩══════════════════════╩══════════════════════════════════════════════════════════════════════════════╝
+
+Total Path Travelled Across All Drones: 67214.57 units
+
+
+STEP 7: System Statistics
+
+════════════════════════════════════════════════════════════════
+                    SYSTEM STATISTICS
+════════════════════════════════════════════════════════════════
+Total Tasks:        75
+Completed Tasks:    75
+Pending Tasks:      0
+Total Drones:       18
+Total Zones:        6
+════════════════════════════════════════════════════════════════
+
+
+Random 50-task comparison scenario completed successfully.
+
+
+
+COMPARISON: SINGLE-TOKEN vs MULTI-TOKEN
+Tasks: 75 | Zones: 6 | Total Drones: 18 | Drones per Zone: 3
+================================================================================
+
+╔════════════════════════════════════════════════════════════════════╗
+║                 SINGLE-TOKEN OUTPUT TABLE                         ║
+╠════╦════════════╦══════════════╦══════════════╦══════════════╣
+║ ID ║ Time Left   ║ Deadline Met ║ Drone        ║ Status       ║
+╠════╬════════════╬══════════════╬══════════════╬══════════════╣
+║  1 ║ 137         ║ YES          ║ D16          ║ COMPLETED    ║
+║  2 ║ 148         ║ YES          ║ D13          ║ COMPLETED    ║
+║  3 ║ 128         ║ NO           ║ None         ║ PENDING      ║
+║  4 ║ 105         ║ NO           ║ None         ║ PENDING      ║
+║  5 ║ 153         ║ YES          ║ D5           ║ COMPLETED    ║
+║  6 ║ 134         ║ YES          ║ D7           ║ COMPLETED    ║
+║  7 ║ 90          ║ NO           ║ None         ║ PENDING      ║
+║  8 ║ 159         ║ YES          ║ D13          ║ COMPLETED    ║
+║  9 ║ 58          ║ NO           ║ None         ║ PENDING      ║
+║ 10 ║ 137         ║ YES          ║ D10          ║ COMPLETED    ║
+║ 11 ║ 174         ║ YES          ║ D13          ║ COMPLETED    ║
+║ 12 ║ 144         ║ YES          ║ D7           ║ COMPLETED    ║
+║ 13 ║ 104         ║ NO           ║ None         ║ PENDING      ║
+║ 14 ║ 70          ║ NO           ║ None         ║ PENDING      ║
+║ 15 ║ 130         ║ NO           ║ None         ║ PENDING      ║
+║ 16 ║ 141         ║ YES          ║ D7           ║ COMPLETED    ║
+║ 17 ║ 159         ║ YES          ║ D17          ║ COMPLETED    ║
+║ 18 ║ 94          ║ NO           ║ None         ║ PENDING      ║
+║ 19 ║ 102         ║ NO           ║ None         ║ PENDING      ║
+║ 20 ║ 80          ║ NO           ║ None         ║ PENDING      ║
+║ 21 ║ 70          ║ NO           ║ None         ║ PENDING      ║
+║ 22 ║ 81          ║ YES          ║ D4           ║ COMPLETED    ║
+║ 23 ║ 100         ║ NO           ║ None         ║ PENDING      ║
+║ 24 ║ 83          ║ NO           ║ None         ║ PENDING      ║
+║ 25 ║ 91          ║ NO           ║ None         ║ PENDING      ║
+║ 26 ║ 85          ║ NO           ║ None         ║ PENDING      ║
+║ 27 ║ 129         ║ YES          ║ D4           ║ COMPLETED    ║
+║ 28 ║ 103         ║ NO           ║ None         ║ PENDING      ║
+║ 29 ║ 96          ║ NO           ║ None         ║ PENDING      ║
+║ 30 ║ 64          ║ NO           ║ None         ║ PENDING      ║
+║ 31 ║ 61          ║ NO           ║ None         ║ PENDING      ║
+║ 32 ║ 126         ║ NO           ║ None         ║ PENDING      ║
+║ 33 ║ 61          ║ NO           ║ None         ║ PENDING      ║
+║ 34 ║ 67          ║ NO           ║ None         ║ PENDING      ║
+║ 35 ║ 141         ║ YES          ║ D9           ║ COMPLETED    ║
+║ 36 ║ 167         ║ YES          ║ D11          ║ COMPLETED    ║
+║ 37 ║ 159         ║ YES          ║ D12          ║ COMPLETED    ║
+║ 38 ║ 172         ║ YES          ║ D14          ║ COMPLETED    ║
+║ 39 ║ 82          ║ NO           ║ None         ║ PENDING      ║
+║ 40 ║ 110         ║ NO           ║ None         ║ PENDING      ║
+║ 41 ║ 174         ║ YES          ║ D7           ║ COMPLETED    ║
+║ 42 ║ 72          ║ NO           ║ None         ║ PENDING      ║
+║ 43 ║ 90          ║ NO           ║ None         ║ PENDING      ║
+║ 44 ║ 174         ║ YES          ║ D17          ║ COMPLETED    ║
+║ 45 ║ 116         ║ NO           ║ None         ║ PENDING      ║
+║ 46 ║ 106         ║ NO           ║ None         ║ PENDING      ║
+║ 47 ║ 171         ║ YES          ║ D5           ║ COMPLETED    ║
+║ 48 ║ 107         ║ NO           ║ None         ║ PENDING      ║
+║ 49 ║ 112         ║ NO           ║ None         ║ PENDING      ║
+║ 50 ║ 100         ║ NO           ║ None         ║ PENDING      ║
+║ 51 ║ 176         ║ YES          ║ D9           ║ COMPLETED    ║
+║ 52 ║ 72          ║ NO           ║ None         ║ PENDING      ║
+║ 53 ║ 58          ║ YES          ║ D8           ║ COMPLETED    ║
+║ 54 ║ 145         ║ YES          ║ D7           ║ COMPLETED    ║
+║ 55 ║ 131         ║ YES          ║ D13          ║ COMPLETED    ║
+║ 56 ║ 81          ║ NO           ║ None         ║ PENDING      ║
+║ 57 ║ 152         ║ YES          ║ D5           ║ COMPLETED    ║
+║ 58 ║ 92          ║ NO           ║ None         ║ PENDING      ║
+║ 59 ║ 82          ║ NO           ║ None         ║ PENDING      ║
+║ 60 ║ 109         ║ NO           ║ None         ║ PENDING      ║
+║ 61 ║ 126         ║ NO           ║ None         ║ PENDING      ║
+║ 62 ║ 65          ║ NO           ║ None         ║ PENDING      ║
+║ 63 ║ 166         ║ YES          ║ D13          ║ COMPLETED    ║
+║ 64 ║ 107         ║ NO           ║ None         ║ PENDING      ║
+║ 65 ║ 132         ║ YES          ║ D18          ║ COMPLETED    ║
+║ 66 ║ 141         ║ YES          ║ D9           ║ COMPLETED    ║
+║ 67 ║ 61          ║ NO           ║ None         ║ PENDING      ║
+║ 68 ║ 87          ║ NO           ║ None         ║ PENDING      ║
+║ 69 ║ 137         ║ YES          ║ D9           ║ COMPLETED    ║
+║ 70 ║ 75          ║ NO           ║ None         ║ PENDING      ║
+║ 71 ║ 177         ║ YES          ║ D15          ║ COMPLETED    ║
+║ 72 ║ 97          ║ YES          ║ D4           ║ COMPLETED    ║
+║ 73 ║ 142         ║ YES          ║ D9           ║ COMPLETED    ║
+║ 74 ║ 165         ║ YES          ║ D14          ║ COMPLETED    ║
+║ 75 ║ 89          ║ NO           ║ None         ║ PENDING      ║
+╚════╩════════════╩══════════════╩══════════════╩══════════════╝
+
+Single-token theoretical capacity count: 6
+
+╔════════════════════════════════════════════════════════════════════╗
+║            SINGLE VS MULTI-TOKEN COMPLETION COMPARISON           ║
+╠══════════════════════╦══════════════╦══════════════╦════════════╣
+║ Approach             ║ Completed    ║ Pending      ║ Difference ║
+╠══════════════════════╬══════════════╬══════════════╬════════════╣
+║ Single-Token         ║ 32          ║ 43          ║ 0          ║
+║ Multi-Token          ║ 75          ║ 0           ║ 43         ║
+╚══════════════════════╩══════════════╩══════════════╩════════════╝

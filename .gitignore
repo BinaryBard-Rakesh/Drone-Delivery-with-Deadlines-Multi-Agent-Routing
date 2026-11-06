@@ -1,0 +1,13 @@
+# Java build output
+*.class
+build/
+out/
+
+# IDE and editor state
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Temporary editor files
+tempCodeRunnerFile.java

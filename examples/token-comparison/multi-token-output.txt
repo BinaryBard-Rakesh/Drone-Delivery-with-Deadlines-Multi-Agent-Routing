@@ -1,0 +1,143 @@
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                         ZONE DISTRIBUTION                             ║
+╠═════╦═════════════════╦═════════════════╦══════════╦════════════════╣
+║ ID  ║ Center (X, Y)   ║ Radius          ║ Tasks    ║ Assigned Drones║
+╠═════╬═════════════════╬═════════════════╬══════════╬════════════════╣
+║ Z1  ║ (67.4, 66.9)    ║ 50.0         ║ 23       ║ 3              ║
+║ Z2  ║ (171.9, 66.9)    ║ 50.0         ║ 30       ║ 3              ║
+║ Z3  ║ (67.4, 170.4)    ║ 50.0         ║ 21       ║ 3              ║
+║ Z4  ║ (171.9, 170.4)    ║ 50.0         ║ 26       ║ 3              ║
+╚═════╩═════════════════╩═════════════════╩══════════╩════════════════╝
+
+
+╔══════════════════════════════════════════════════════════════════════════════════╗
+║                PARALLEL ZONE TOKEN EXECUTION REPORT                           ║
+╠══════╦══════════════════╦══════╦══════════════════╦══════════════════════╦══════════════════════╦══════════════════╣
+║ Zone ║ Zone Token       ║ Task ║ Status           ║ Time Left (min)      ║ Deadline Met         ║ Parallel Drones ║
+╠══════╬══════════════════╬══════╬══════════════════╬══════════════════════╬══════════════════════╬══════════════════╣
+║ Z1  ║ Parallel Token   ║ T9  ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T17 ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T21 ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T37 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T38 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T40 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T64 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T66 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T69 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T73 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T85 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T86 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T36 ║ PENDING         ║ 13                  ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T68 ║ PENDING         ║ 13                  ║ NO                  ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T11 ║ COMPLETED       ║ 20                  ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T2  ║ COMPLETED       ║ 24                  ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T94 ║ COMPLETED       ║ 32                  ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T60 ║ COMPLETED       ║ 35                  ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T51 ║ COMPLETED       ║ 42                  ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T71 ║ COMPLETED       ║ 43                  ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T14 ║ COMPLETED       ║ 46                  ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T99 ║ COMPLETED       ║ 46                  ║ YES                 ║ 3              ║
+║ Z1  ║ Parallel Token   ║ T35 ║ COMPLETED       ║ 47                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T10 ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T12 ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T13 ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T22 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T23 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T29 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T33 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T43 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T45 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T49 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T81 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T83 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T89 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T87 ║ PENDING         ║ 3                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T56 ║ PENDING         ║ 7                   ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T32 ║ PENDING         ║ 12                  ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T46 ║ PENDING         ║ 12                  ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T79 ║ PENDING         ║ 13                  ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T98 ║ PENDING         ║ 13                  ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T67 ║ COMPLETED       ║ 17                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T24 ║ COMPLETED       ║ 19                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T30 ║ COMPLETED       ║ 20                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T78 ║ PENDING         ║ 21                  ║ NO                  ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T42 ║ COMPLETED       ║ 28                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T20 ║ COMPLETED       ║ 36                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T72 ║ COMPLETED       ║ 43                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T27 ║ COMPLETED       ║ 45                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T100║ COMPLETED       ║ 45                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T82 ║ COMPLETED       ║ 47                  ║ YES                 ║ 3              ║
+║ Z2  ║ Parallel Token   ║ T4  ║ COMPLETED       ║ 51                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T5  ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T8  ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T41 ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T53 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T59 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T80 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T63 ║ PENDING         ║ 2                   ║ NO                  ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T76 ║ PENDING         ║ 3                   ║ NO                  ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T92 ║ PENDING         ║ 15                  ║ NO                  ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T7  ║ COMPLETED       ║ 16                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T52 ║ COMPLETED       ║ 18                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T6  ║ COMPLETED       ║ 20                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T70 ║ PENDING         ║ 21                  ║ NO                  ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T84 ║ COMPLETED       ║ 25                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T50 ║ COMPLETED       ║ 36                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T31 ║ COMPLETED       ║ 37                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T96 ║ COMPLETED       ║ 38                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T91 ║ COMPLETED       ║ 40                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T26 ║ COMPLETED       ║ 41                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T28 ║ COMPLETED       ║ 49                  ║ YES                 ║ 3              ║
+║ Z3  ║ Parallel Token   ║ T18 ║ COMPLETED       ║ 50                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T1  ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T3  ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T16 ║ COMPLETED       ║ 0                   ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T25 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T47 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T57 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T61 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T62 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T65 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T77 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T93 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T97 ║ PENDING         ║ 0                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T58 ║ PENDING         ║ 8                   ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T74 ║ PENDING         ║ 11                  ║ NO                  ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T39 ║ COMPLETED       ║ 18                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T95 ║ COMPLETED       ║ 25                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T55 ║ COMPLETED       ║ 27                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T19 ║ COMPLETED       ║ 28                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T34 ║ COMPLETED       ║ 33                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T75 ║ COMPLETED       ║ 35                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T44 ║ COMPLETED       ║ 40                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T88 ║ COMPLETED       ║ 40                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T15 ║ COMPLETED       ║ 46                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T90 ║ COMPLETED       ║ 47                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T54 ║ COMPLETED       ║ 51                  ║ YES                 ║ 3              ║
+║ Z4  ║ Parallel Token   ║ T48 ║ COMPLETED       ║ 53                  ║ YES                 ║ 3              ║
+╚══════╩══════════════════╩══════╩══════════════════╩══════════════════════╩══════════════════════╩══════════════════╝
+
+
+══════════════════════════════════════════════════════════════════════
+MULTI-TOKEN VS SINGLE-TOKEN COMPARISON
+══════════════════════════════════════════════════════════════════════
+Single-token feasible tasks: 6
+Multi-token feasible tasks: 14
+Result: Multi-token completes more tasks.
+Note: 4 zones with 3 drones each provide more parallel capacity than a single-token lane.
+
+
+
+
+
+════════════════════════════════════════════════════════════════
+                    SYSTEM STATISTICS
+════════════════════════════════════════════════════════════════
+Total Tasks:        100
+Completed Tasks:    54
+Pending Tasks:      46
+Total Drones:       12
+Total Zones:        4
+════════════════════════════════════════════════════════════════
+
